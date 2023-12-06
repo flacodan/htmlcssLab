@@ -1,29 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Order a Smoothiegram!</title>
-  </head>
-
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order a Smoothiegram!</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="container">
     <header>
-      Order a Smoothiegram There's no better way to show a loved one you care than with a
-      Smoothiegram! Each Smoothiegram comes with a custom message printed on high-quality cardstock
-      and your choice of a premium, hand-crafted smoothie.
+      <h1>Order a Smoothiegram</h1>
+      <p class="lead">There's no better way to show a loved one you care than with a Smoothiegram!</p>
+      <p>Each Smoothiegram comes with a custom message printed on high-quality cardstock
+        and your choice of a premium, hand-crafted smoothie.</p>
     </header>
+  </div>
 
+  <div id="container">
     <main>
       <section>
-        Smoothie Options Choose from one of these smoothies. Flavor Price Super Strawberries
-        Delicious $1,200.00 White Grape Ranger $400.00 Blueberry Blast $1,750.00
+      <h2>Smoothie Options</h2>
+        <p>Choose from one of these smoothies.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Flavor</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Super Strawberries Delicious</td>
+              <td class="price">$1,200.00</td>
+            </tr>
+            <tr>
+              <td>White Grape Ranger</td>
+              <td class="price">$400.00</td>
+            </tr>
+            <tr>
+              <td>Blueberry Blast</td>
+              <td class="price">$1,750.00</td>
+            </tr>
+          </tbody>
+        </table>
+      
       </section>
-
       <section>
-        Order Form Your name Who are we sending this to? Choose a smoothie Please choose an option
-        Super Strawberries Delicious White Grape Ranger Blueberry Blast When should we deliver? As
-        soon as possible Morning Afternoon Enter your message Subscribe to our newsletter? Submit
+      <h2>Order Form</h2>
+      <form>
+        <div class="form-group">
+          <label for="senderName">Your name</label>
+          <input name="sender" type="text" id="senderName">
+        </div>
+        <div class="form-group">
+          <label for="recipName">Who are we sending this to?</label>
+          <input type="text" name="recipient" id="recipName">
+        </div>
+
+        <div class="form-group">
+          <label for="chooseSmoothie">Choose a smoothie</label>
+          <select name="smoothie" id="chooseSmoothie">
+            <option>Please choose an option</option>
+            <option>Super Strawberries Delicious</option>
+            <option>White Grape Ranger</option>
+            <option>Blueberry Blast</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <span>When should we deliver?</span>
+          <input type="radio" name="delivery-time" value="asap" id="asap">
+          <label for="asap" class="inline-label">As soon as possible</label>
+          <input type="radio" name="delivery-time" value="am" id="am">
+          <label for="am" class="inline-label">Morning</label>
+          <input type="radio" name="delivery-time" value="pm" id="pm">
+          <label for="pm" class="inline-label">Afternoon</label>
+        </div>
+
+        <div class="form-group">
+          <label for="customerMessage">Enter your message</label>
+          <textarea name="message" id="customer-message"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="subscribe" class="inline-label">Subscribe to our newsletter?</label>
+          <input type="checkbox" name="subscribe" id="subscribe" value="yes" checked>
+        </div>
+
+        <div class="form-group">
+          <button type="submit">Submit</button>
+        </div>
+        
+      </form>
       </section>
     </main>
-  </body>
+  </div>
+</body>
 </html>
